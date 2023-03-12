@@ -21,20 +21,18 @@ public class ProductRepository {
         Product[] tmp = new Product[products.length - 1];
         int copyToIndex = 0;
         for (Product product : products) {
-            if (product.getId() != id) {
+
+            if (product.getId() != Id) {
                 tmp[copyToIndex] = product;
                 copyToIndex ++;
             }
-
         }
         products = tmp;
-
 
     }
 
     public Product[] findAll() {
         return products;
-
 
     }
 
