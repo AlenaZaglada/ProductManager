@@ -24,7 +24,7 @@ class ProductRepositoryTest {
         repo.save(product4);
         repo.removeById(product2.getId());
 
-        Product[] expected = {product1, product3};
+        Product[] expected = {product1, product3, product4 };
         Product[] actual = repo.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
@@ -40,7 +40,7 @@ class ProductRepositoryTest {
         repo.save(product4);
 
 
-        Product[] expected = {product1, product2, product3, product4};
+        Product[] expected = {product1, product2, product3, product4 };
         Product[] actual = repo.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
