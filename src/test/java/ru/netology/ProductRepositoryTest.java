@@ -25,7 +25,7 @@ class ProductRepositoryTest {
         Product[] expected = {product1, product3};
         Product[] actual = repo.findAll();
 
-        Assertions.assertArrayEquals( expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
 

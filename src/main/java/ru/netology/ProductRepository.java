@@ -16,15 +16,14 @@ public class ProductRepository {
     }
 
 
-
-    public void removeById (int Id) {
+    public void removeById(int Id) {
         Product[] tmp = new Product[products.length - 1];
         int copyToIndex = 0;
         for (Product product : products) {
 
             if (product.getId() != Id) {
                 tmp[copyToIndex] = product;
-                copyToIndex ++;
+                copyToIndex++;
             }
         }
         products = tmp;

@@ -8,18 +8,18 @@ class ProductManagerTest {
     ProductRepository repo = new ProductRepository();
     ProductManager manager = new ProductManager(repo);
 
-    Product product1 = new Product (11, "Мы", 200);
-    Product product2 = new Product (245, "Nokia3210", 7000);
-    Product product3 = new Product (312, "Samsung", 22000);
+    Product product1 = new Product(11, "Мы", 200);
+    Product product2 = new Product(245, "Nokia3210", 7000);
+    Product product3 = new Product(312, "Samsung", 22000);
 
-    Product product4 = new Product (215, "NokiaE51", 35800);
+    Product product4 = new Product(215, "NokiaE51", 35800);
 
     @BeforeEach
     public void setup() {
-        manager.add (product1);
-        manager.add (product2);
-        manager.add (product3);
-        manager.add (product4);
+        manager.add(product1);
+        manager.add(product2);
+        manager.add(product3);
+        manager.add(product4);
     }
 
     @Test
@@ -27,18 +27,12 @@ class ProductManagerTest {
     public void searchBy() {
 
 
-
-        Product[] expected = { product2, product4 };
+        Product[] expected = {product2, product4};
         Product[] actual = manager.searchBy("Nokia");
 
         Assertions.assertArrayEquals(expected, actual);
 
     }
-
-
-
-
-
 
 
 }
