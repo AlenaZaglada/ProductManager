@@ -34,5 +34,29 @@ class ProductManagerTest {
 
     }
 
+    @Test
+
+    public void searchForWathIsNot() {
+
+
+        Product[] expected = {};
+        Product[] actual = manager.searchBy("Хлеб}");
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+
+    public void searchByAnotherLanguage() {
+
+
+        Product[] expected = {};
+        Product[] actual = manager.searchBy("Нокиа}");
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
 
 }
