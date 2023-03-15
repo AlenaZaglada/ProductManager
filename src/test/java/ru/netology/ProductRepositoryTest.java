@@ -15,6 +15,22 @@ class ProductRepositoryTest {
 
 
     @Test
+    public void testRemoveByIdNothing () {
+
+        ProductRepository repo = new ProductRepository();
+        repo.save(product1);
+        repo.save(product2);
+        repo.save(product3);
+        repo.save(product4);
+
+
+        Product[] expected = {product1, product2, product3, product4 };
+        Product[] actual = repo.findAll();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
     public void testRemoveById () {
 
         ProductRepository repo = new ProductRepository();
@@ -22,7 +38,7 @@ class ProductRepositoryTest {
         repo.save(product2);
         repo.save(product3);
         repo.save(product4);
-        repo.removeById(product2.getId());
+        repo.removeById(product4.getId());
 
         Product[] expected = {product1, product3, product4 };
         Product[] actual = repo.findAll();
